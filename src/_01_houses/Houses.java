@@ -16,8 +16,10 @@ public class Houses {
 		builder.setSpeed(50);
 		builder.setPenWidth(10);
 		
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 4; i++) {
 			build(100);
+		
+			builder.setRandomPenColor();
 			
 		}
 		build("small", "green");
@@ -35,15 +37,19 @@ public class Houses {
 		builder.move(35);
 		builder.setPenColor(Color.black);
 		builder.turn(270);
+	
 	}
 	 void build(String size, String color) {
 			int height = 0;
 		 if(size.equals("small")) {
 			 height = 60;
+			 drawPointyRoof(height);
 		 } else if (size.equals("medium")) {
 			 height = 120;
+			 drawPointyRoof(height);
 		 } else if (size.equals("large")) {
 			 height = 250;
+			 drawFlatRoof(height);
 		 }
 		 if (color.equals("red")) {
 			 builder.setPenColor(Color.red);
@@ -55,6 +61,32 @@ public class Houses {
 			 builder.setPenColor(Color.yellow);
 		 }
 			builder.move(height);
+			builder.turn(90);
+			builder.move(40);
+			builder.turn(90);
+			builder.move(height);
+			builder.setPenColor(Color.green);
+			builder.turn(-90);
+			builder.move(35);
+			builder.setPenColor(Color.black);
+			builder.turn(270);
+	 }
+	 void drawPointyRoof(int height) {
+		 builder.move(height);
+			builder.turn(60);
+			builder.move(20);
+			builder.turn(60);
+			builder.move(20);
+			builder.turn(-300);
+			builder.move(height);
+			builder.setPenColor(Color.green);
+			builder.turn(-90);
+			builder.move(35);
+			builder.setPenColor(Color.black);
+			builder.turn(270);
+	 }
+	 void drawFlatRoof(int height) {
+		 builder.move(height);
 			builder.turn(90);
 			builder.move(40);
 			builder.turn(90);

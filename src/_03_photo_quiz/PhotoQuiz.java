@@ -26,9 +26,9 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
-
+		String link = "https://cdn.britannica.com/10/152310-050-5A09D74A/Sand-dunes-Sahara-Morocco-Merzouga.jpg";
 		// 2. create a variable of type "Component" that will hold your image
-
+		
 		// 3. use the "createImage()" method below to initialize your Component
 
 		// 4. add the image to the quiz window
