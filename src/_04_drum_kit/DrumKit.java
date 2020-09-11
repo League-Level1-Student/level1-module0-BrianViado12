@@ -57,7 +57,7 @@ public class DrumKit implements MouseListener {
 		// your drum image?
 			frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
-			drumLabelWithImage.addMouseListener(null);
+			drumLabelWithImage.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
 
@@ -66,7 +66,7 @@ public class DrumKit implements MouseListener {
 	public void mouseClicked(MouseEvent e) {
 		// 14. Print "mouse clicked" to the console. Run your program and watch
 		// the console to see when this is printed.
-		System.out.println("mouse clicked");
+		System.out.println("Mouse Clicked");
 		JLabel drumClicked = (JLabel) e.getSource(); // This line gets the label
 														// that the mouse
 														// clicked on
@@ -76,7 +76,13 @@ public class DrumKit implements MouseListener {
 		// leagueofamazing/code4life.
 
 		// 16. If they clicked on the drumImage...
-
+		
+		if(drumLabelWithImage.equals(drumClicked)) {
+			String sound = "drum.wav";
+			playSound(sound);
+		}
+			
+		
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 
