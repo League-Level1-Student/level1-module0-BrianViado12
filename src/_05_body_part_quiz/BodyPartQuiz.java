@@ -73,9 +73,36 @@ public class BodyPartQuiz {
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
+		String guess2 = JOptionPane.showInputDialog("Who is this?");
+		if (guess2.equalsIgnoreCase("Leonardo")) {
+			JOptionPane.showMessageDialog(null, "Correct!");
+			score = 1+1;
+		} else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+			JOptionPane.showMessageDialog(null, "It is Leonardo");
+		}
+		showNextImage();
+		String guess3 = JOptionPane.showInputDialog("Who is this?");
+		if(guess3.equalsIgnoreCase("Morgan")) {
+			JOptionPane.showMessageDialog(null, "Correct");
+			score = 2+1;
+		} else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+			JOptionPane.showMessageDialog(null, "It's Morgan");
+		}
+		showNextImage();
+		String guess4 = JOptionPane.showInputDialog(null, "Who is this?");
+		if(guess4.equalsIgnoreCase("Jack")) {
+			JOptionPane.showMessageDialog(null, "Correct!");
+			score = 3+1;
+		}else {
+			JOptionPane.showMessageDialog(null, "Incorrect");
+			JOptionPane.showMessageDialog(null, "It's Jack");
+		}
 		
 		// 9. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "You current score is " +score);
+		
 	}
 
 	public void showNextImage() {
