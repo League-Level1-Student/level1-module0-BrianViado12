@@ -17,28 +17,28 @@ public class FortuneCookie implements ActionListener {
             frame.add(button);
             frame.pack();
             button.addActionListener(this);
-            int rand = new Random().nextInt(5);	
-            if(rand==(0)) {
-            	
-            }
-            if(rand==(1)) {
-            	
-            }
-            if(rand==(2)) {
-            	
-            }
-            if(rand==(3)) {
-            	
-            }
-            if(rand==(4)) {
-            	
-            }
+          
        }
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			JOptionPane.showMessageDialog(null, "Woohoo");
+			 int rand = new Random().nextInt(5);	
+	            if(rand==(0)) {
+	            	JOptionPane.showMessageDialog(null, "Woohoo 1");
+	            }
+	            else if(rand==(1)) {
+	            	JOptionPane.showMessageDialog(null, "Woohoo 2");
+	            }
+	            else if(rand==(2)) {
+	            	JOptionPane.showMessageDialog(null, "Woohoo 3");
+	            }
+	            else if(rand==(3)) {
+	            	JOptionPane.showMessageDialog(null, "Woohoo 4");
+	            }
+	            else if(rand==(4)) {
+	            	JOptionPane.showMessageDialog(null, "Woohoo 5");
+	            }
 		}
     }
 
