@@ -1,13 +1,36 @@
 package _08_jack_in_the_box;
 
+import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-public class JackInTheBox {
+public class JackInTheBox implements ActionListener {
+	public void showButton() {
+	JFrame frame = new JFrame();
+	frame.setVisible(true);
+	JButton button = new JButton();
+	frame.add(button);
+	frame.pack();
+	button.addActionListener(this);
+	
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		num++;
+		if (num==5) {
+			showPicture("jackInTheBox.png");
+		}
+	}
 	private void showPicture(String fileName) { 
 	     try {
 	          JLabel imageLabel = createLabelImage(fileName);
@@ -37,9 +60,6 @@ public class JackInTheBox {
 	          return new JLabel();
 	     }
 	}
-
-	
-	
-		
+	int num = 0;
 	
 }

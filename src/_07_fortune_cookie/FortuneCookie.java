@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
 
 public class FortuneCookie implements ActionListener {
         public void showButton() {
-        	System.out.println("Button clicked");
+        	
         	JFrame frame = new JFrame();
             frame.setVisible(true);
             JButton button = new JButton();
@@ -23,7 +23,8 @@ public class FortuneCookie implements ActionListener {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			 int rand = new Random().nextInt(5);	
+			System.out.println("Button clicked");
+			int rand = new Random().nextInt(5);	
 	            if(rand==(0)) {
 	            	JOptionPane.showMessageDialog(null, "Woohoo 1");
 	            }
