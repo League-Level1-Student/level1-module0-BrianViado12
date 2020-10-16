@@ -1,5 +1,6 @@
 package _08_jack_in_the_box;
 
+import java.applet.AudioClip;
 import java.awt.Button;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,6 +8,7 @@ import java.net.URL;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JApplet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,6 +31,7 @@ public class JackInTheBox implements ActionListener {
 		num++;
 		if (num==5) {
 			showPicture("jackInTheBox.png");
+			playSound("homer-woohoo.wav");
 		}
 	}
 	private void showPicture(String fileName) { 
@@ -58,6 +61,14 @@ public class JackInTheBox implements ActionListener {
 	     } catch (Exception e) {
 	          System.err.println("Could not find image " + fileName);
 	          return new JLabel();
+	     }
+	}
+	private void playSound(String soundFile) { 
+	     try {
+	          AudioClip sound = JApplet.newAudioClip(getClass().getResource(soundFile));
+	          sound.play();
+	     } catch (Exception e) {
+	          e.printStackTrace();
 	     }
 	}
 	int num = 0;
