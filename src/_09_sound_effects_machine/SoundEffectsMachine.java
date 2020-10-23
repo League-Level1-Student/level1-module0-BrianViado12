@@ -29,8 +29,11 @@ public class SoundEffectsMachine implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
+		// TODO Auto-generated method stub
+		if(button1==e.getSource()) {
+			
+		}
 	}
 	
 	private void playSound(String fileName) {
