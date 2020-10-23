@@ -10,14 +10,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class SoundEffectsMachine implements ActionListener {
+	JButton button1 = new JButton();
+	JButton button2 = new JButton();
+	JButton button3 = new JButton();
 	public void showButton() {
 		JFrame frame = new JFrame();
 		frame.setVisible(true);
 		JPanel panel = new JPanel();
 		frame.add(panel);
-		JButton button1 = new JButton();
-		JButton button2 = new JButton();
-		JButton button3 = new JButton();
+		
 		panel.add(button1);
 		panel.add(button2);
 		panel.add(button3);
@@ -32,7 +33,13 @@ public class SoundEffectsMachine implements ActionListener {
 		
 		// TODO Auto-generated method stub
 		if(button1==e.getSource()) {
-			
+			playSound("513601__leonard-b-blaesing__metal-intro.wav");
+		}
+		if(button2==e.getSource()) {
+			playSound("54847__izkhanilov__morse-sos.wav");
+		}
+		if(button3==e.getSource()) {
+			playSound("536877__magnuswaker__electro-spark-1.wav");
 		}
 	}
 	
