@@ -39,7 +39,7 @@ public class SoundEffectsMachine implements ActionListener {
 			playSound("54847__izkhanilov__morse-sos.wav");
 		}
 		if(button3==e.getSource()) {
-			playSound("536877__magnuswaker__electro-spark-1.wav");
+			playSound("531015__noted451__ocean-waves.wav");
 		}
 	}
 	
